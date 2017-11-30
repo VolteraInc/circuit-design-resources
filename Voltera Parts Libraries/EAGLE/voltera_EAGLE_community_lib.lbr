@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="6.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -11461,6 +11461,150 @@
 <vertex x="2.991" y="98.787" curve="-90"/>
 </polygon>
 </package>
+<package name="2X3_BOARD_FR1">
+<wire x1="0" y1="2.54" x2="0" y2="48.26" width="0.127" layer="20"/>
+<wire x1="0" y1="48.26" x2="2.54" y2="50.8" width="0.127" layer="20" curve="-90"/>
+<wire x1="2.54" y1="50.8" x2="73.66" y2="50.8" width="0.127" layer="20"/>
+<wire x1="73.66" y1="50.8" x2="76.2" y2="48.26" width="0.127" layer="20" curve="-90"/>
+<wire x1="76.2" y1="48.26" x2="76.2" y2="2.54" width="0.127" layer="20"/>
+<wire x1="76.2" y1="2.54" x2="73.66" y2="0" width="0.127" layer="20" curve="-90"/>
+<wire x1="73.66" y1="0" x2="2.54" y2="0" width="0.127" layer="20"/>
+<wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="20" curve="-90"/>
+<polygon width="0.0762" layer="21">
+<vertex x="70.936" y="2.902"/>
+<vertex x="70.936" y="3.664" curve="-90"/>
+<vertex x="71.19" y="3.918"/>
+<vertex x="71.952" y="3.918" curve="-90"/>
+<vertex x="72.206" y="3.664"/>
+<vertex x="72.206" y="2.902" curve="-90"/>
+<vertex x="71.952" y="2.648"/>
+<vertex x="71.19" y="2.648" curve="-90"/>
+</polygon>
+<polygon width="0.0762" layer="21">
+<vertex x="72.333" y="2.267"/>
+<vertex x="72.333" y="1.505" curve="90"/>
+<vertex x="72.587" y="1.251"/>
+<vertex x="73.349" y="1.251" curve="90"/>
+<vertex x="73.603" y="1.505"/>
+<vertex x="73.603" y="2.013" curve="-90"/>
+<vertex x="74.238" y="2.648"/>
+<vertex x="74.746" y="2.648" curve="90"/>
+<vertex x="75" y="2.902"/>
+<vertex x="75" y="3.664" curve="90"/>
+<vertex x="74.746" y="3.918"/>
+<vertex x="73.984" y="3.918" curve="90"/>
+<vertex x="73.73" y="3.664"/>
+<vertex x="73.73" y="3.156" curve="-90"/>
+<vertex x="73.095" y="2.521"/>
+<vertex x="72.587" y="2.521" curve="90"/>
+</polygon>
+<polygon width="0.0762" layer="22">
+<vertex x="1.34" y="47.606"/>
+<vertex x="1.34" y="46.844" curve="90"/>
+<vertex x="1.594" y="46.59"/>
+<vertex x="2.356" y="46.59" curve="90"/>
+<vertex x="2.61" y="46.844"/>
+<vertex x="2.61" y="47.606" curve="90"/>
+<vertex x="2.356" y="47.86"/>
+<vertex x="1.594" y="47.86" curve="90"/>
+</polygon>
+<polygon width="0.0762" layer="22">
+<vertex x="2.737" y="48.241"/>
+<vertex x="2.737" y="49.003" curve="-90"/>
+<vertex x="2.991" y="49.257"/>
+<vertex x="3.753" y="49.257" curve="-90"/>
+<vertex x="4.007" y="49.003"/>
+<vertex x="4.007" y="48.495" curve="90"/>
+<vertex x="4.642" y="47.86"/>
+<vertex x="5.15" y="47.86" curve="-90"/>
+<vertex x="5.404" y="47.606"/>
+<vertex x="5.404" y="46.844" curve="-90"/>
+<vertex x="5.15" y="46.59"/>
+<vertex x="4.388" y="46.59" curve="-90"/>
+<vertex x="4.134" y="46.844"/>
+<vertex x="4.134" y="47.352" curve="90"/>
+<vertex x="3.499" y="47.987"/>
+<vertex x="2.991" y="47.987" curve="-90"/>
+</polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="P$4" x="72.7" y="47.3" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="P$5" x="72.7" y="47.3" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
+<smd name="P$6" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
+<text x="2" y="48.8" size="1.016" layer="21" align="top-left">FR1</text>
+<text x="74.2" y="2" size="1.016" layer="22" rot="SR180" align="top-left">FR1</text>
+</package>
+<package name="3X4_BOARD_FR1">
+<wire x1="0" y1="2.54" x2="2.54" y2="0" width="0.127" layer="20" curve="90"/>
+<wire x1="2.54" y1="0" x2="99.06" y2="0" width="0.127" layer="20"/>
+<wire x1="99.06" y1="0" x2="101.6" y2="2.54" width="0.127" layer="20" curve="90"/>
+<wire x1="101.6" y1="2.54" x2="101.6" y2="73.66" width="0.127" layer="20"/>
+<wire x1="101.6" y1="73.66" x2="99.06" y2="76.2" width="0.127" layer="20" curve="90"/>
+<wire x1="99.06" y1="76.2" x2="2.54" y2="76.2" width="0.127" layer="20"/>
+<wire x1="2.54" y1="76.2" x2="0" y2="73.66" width="0.127" layer="20" curve="90"/>
+<wire x1="0" y1="73.66" x2="0" y2="2.54" width="0.127" layer="20"/>
+<polygon width="0.0762" layer="21">
+<vertex x="96.26" y="2.464"/>
+<vertex x="96.26" y="3.226" curve="-90"/>
+<vertex x="96.514" y="3.48"/>
+<vertex x="97.276" y="3.48" curve="-90"/>
+<vertex x="97.53" y="3.226"/>
+<vertex x="97.53" y="2.464" curve="-90"/>
+<vertex x="97.276" y="2.21"/>
+<vertex x="96.514" y="2.21" curve="-90"/>
+</polygon>
+<polygon width="0.0762" layer="21">
+<vertex x="97.657" y="1.829"/>
+<vertex x="97.657" y="1.067" curve="90"/>
+<vertex x="97.911" y="0.813"/>
+<vertex x="98.673" y="0.813" curve="90"/>
+<vertex x="98.927" y="1.067"/>
+<vertex x="98.927" y="1.575" curve="-90"/>
+<vertex x="99.562" y="2.21"/>
+<vertex x="100.07" y="2.21" curve="90"/>
+<vertex x="100.324" y="2.464"/>
+<vertex x="100.324" y="3.226" curve="90"/>
+<vertex x="100.07" y="3.48"/>
+<vertex x="99.308" y="3.48" curve="90"/>
+<vertex x="99.054" y="3.226"/>
+<vertex x="99.054" y="2.718" curve="-90"/>
+<vertex x="98.419" y="2.083"/>
+<vertex x="97.911" y="2.083" curve="90"/>
+</polygon>
+<polygon width="0.0762" layer="22">
+<vertex x="1.01" y="73.076"/>
+<vertex x="1.01" y="72.314" curve="90"/>
+<vertex x="1.264" y="72.06"/>
+<vertex x="2.026" y="72.06" curve="90"/>
+<vertex x="2.28" y="72.314"/>
+<vertex x="2.28" y="73.076" curve="90"/>
+<vertex x="2.026" y="73.33"/>
+<vertex x="1.264" y="73.33" curve="90"/>
+</polygon>
+<polygon width="0.0762" layer="22">
+<vertex x="2.407" y="73.711"/>
+<vertex x="2.407" y="74.473" curve="-90"/>
+<vertex x="2.661" y="74.727"/>
+<vertex x="3.423" y="74.727" curve="-90"/>
+<vertex x="3.677" y="74.473"/>
+<vertex x="3.677" y="73.965" curve="90"/>
+<vertex x="4.312" y="73.33"/>
+<vertex x="4.82" y="73.33" curve="-90"/>
+<vertex x="5.074" y="73.076"/>
+<vertex x="5.074" y="72.314" curve="-90"/>
+<vertex x="4.82" y="72.06"/>
+<vertex x="4.058" y="72.06" curve="-90"/>
+<vertex x="3.804" y="72.314"/>
+<vertex x="3.804" y="72.822" curve="90"/>
+<vertex x="3.169" y="73.457"/>
+<vertex x="2.661" y="73.457" curve="-90"/>
+</polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="P$4" x="98.1" y="72.7" dx="1" dy="1" layer="1" roundness="100"/>
+<smd name="P$5" x="98.1" y="72.7" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
+<smd name="P$6" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
+<text x="2" y="74.2" size="1.016" layer="21" align="top-left">FR1</text>
+<text x="99.6" y="2" size="1.016" layer="22" rot="SR180" align="top-left">FR1</text>
+</package>
 </packages>
 <symbols>
 <symbol name="VIAS">
@@ -12358,7 +12502,7 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 </device>
 </devices>
 </deviceset>
-<deviceset name="TEMPLATE_ARDUINO_UNO">
+<deviceset name="TEMPLATE_ARDUINO_UNO" prefix="P">
 <description>Use SHIELD for integrating into circuits. Use RAW for created the template boards.</description>
 <gates>
 <gate name="G$1" symbol="ARDUINO_UNO_TEMPLATE" x="0" y="0"/>
