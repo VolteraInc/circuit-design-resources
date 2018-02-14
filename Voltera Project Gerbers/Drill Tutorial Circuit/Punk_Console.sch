@@ -191,7 +191,6 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <wire x1="4.305" y1="-1.9" x2="-4.305" y2="-1.9" width="0.2032" layer="51"/>
 <wire x1="-4.305" y1="-1.9" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
 <wire x1="-4.305" y1="-1.4" x2="-4.305" y2="1.9" width="0.2032" layer="51"/>
-<wire x1="4.305" y1="-1.4" x2="-4.305" y2="-1.4" width="0.2032" layer="51"/>
 <wire x1="4.305" y1="1.9" x2="4.305" y2="-1.4" width="0.2032" layer="51"/>
 <wire x1="4.305" y1="-1.4" x2="4.305" y2="-1.9" width="0.2032" layer="51"/>
 <wire x1="-4.305" y1="1.9" x2="4.305" y2="1.9" width="0.2032" layer="51"/>
@@ -225,6 +224,7 @@ Operational amplifiers,  comparators, voltage regulators, ADCs, DACs, etc.&lt;p&
 <rectangle x1="3.565" y1="2" x2="4.055" y2="3.1" layer="51"/>
 <rectangle x1="2.295" y1="2" x2="2.785" y2="3.1" layer="51"/>
 <rectangle x1="1.025" y1="2" x2="1.515" y2="3.1" layer="51"/>
+<wire x1="-3.045" y1="1.13" x2="-3.045" y2="-1.13" width="0.2032" layer="51"/>
 </package>
 </packages>
 <symbols>
@@ -395,9 +395,6 @@ Updated 01/08/2005&lt;/i&gt;&lt;/h4&gt;</description>
 </library>
 <library name="voltera">
 <packages>
-<package name="VOLT_RIVET_1MM">
-<pad name="P$1" x="0" y="0" drill="1.6" diameter="2.4"/>
-</package>
 <package name="VIA_BATTERY_PADS">
 <pad name="NEG" x="-6.35" y="0" drill="1.6" diameter="5"/>
 <pad name="POS" x="6.35" y="0" drill="1.6" diameter="5"/>
@@ -410,48 +407,29 @@ Updated 01/08/2005&lt;/i&gt;&lt;/h4&gt;</description>
 <smd name="NEG" x="6.35" y="-0.04" dx="5.842" dy="5.842" layer="1" roundness="100"/>
 <smd name="POS" x="-6.35" y="0" dx="5.842" dy="5.842" layer="1" roundness="100"/>
 </package>
-<package name="VOLT_RIVET_0.4MM">
-<pad name="P$1" x="0" y="0" drill="0.8" diameter="1.1"/>
+<package name="BUZZER_PS1240P02BT">
+<pad name="P$1" x="-2.5" y="0" drill="1.6" diameter="2.2"/>
+<pad name="P$2" x="2.5" y="0" drill="1.6" diameter="2.2"/>
+<circle x="0" y="0" radius="6.1" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
-<symbol name="TEST_POINT">
-<wire x1="2.54" y1="0" x2="0" y2="0" width="0.1524" layer="94"/>
-<wire x1="3.302" y1="0.762" x2="3.302" y2="-0.762" width="0.1524" layer="94" curve="180"/>
-<pin name="1" x="0" y="0" visible="off" length="point" rot="R180"/>
-<text x="0" y="2.54" size="1.4224" layer="95">&gt;Name</text>
-</symbol>
 <symbol name="SMD_BATTERY">
 <wire x1="0" y1="2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="2.54" y1="1.27" x2="2.54" y2="-1.27" width="0.254" layer="94"/>
 <pin name="NEG" x="7.62" y="0" visible="pad" length="middle" rot="R180"/>
 <pin name="POS" x="-5.08" y="0" visible="pad" length="middle"/>
 </symbol>
+<symbol name="PIEZO_BUZZER">
+<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+<pin name="2" x="-5.08" y="-2.54" visible="pin" length="middle"/>
+<pin name="1" x="-5.08" y="2.54" visible="pin" length="middle"/>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="VOLT_RIVET">
-<gates>
-<gate name="G$1" symbol="TEST_POINT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="0.4MM" package="VOLT_RIVET_0.4MM">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1MM" package="VOLT_RIVET_1MM">
-<connects>
-<connect gate="G$1" pin="1" pad="P$1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="SMD_BATTERY_9V">
 <gates>
 <gate name="G$1" symbol="SMD_BATTERY" x="0" y="0"/>
@@ -479,6 +457,22 @@ Updated 01/08/2005&lt;/i&gt;&lt;/h4&gt;</description>
 <connects>
 <connect gate="G$1" pin="NEG" pad="NEG"/>
 <connect gate="G$1" pin="POS" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="BUZZER">
+<gates>
+<gate name="G$1" symbol="PIEZO_BUZZER" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BUZZER_PS1240P02BT">
+<connects>
+<connect gate="G$1" pin="1" pad="P$1"/>
+<connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1710,8 +1704,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="IC1" library="linear" deviceset="*556" device="D" technology="NE"/>
 <part name="VR1" library="bourns" deviceset="3352" device="VOLT"/>
 <part name="VR2" library="bourns" deviceset="3352" device="VOLT"/>
-<part name="U$2" library="voltera" deviceset="VOLT_RIVET" device="1MM"/>
-<part name="U$3" library="voltera" deviceset="VOLT_RIVET" device="1MM"/>
 <part name="PWR_LED" library="SparkFun-LED" deviceset="LED" device="1206"/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -1731,6 +1723,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="R2" library="SparkFun-Resistors" deviceset="RESISTOR" device="1206" value="1k"/>
 <part name="R5" library="SparkFun-Resistors" deviceset="RESISTOR" device="1206" value="1k"/>
+<part name="U$5" library="voltera" deviceset="BUZZER" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1763,8 +1756,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="IC1" gate="B" x="121.92" y="45.72"/>
 <instance part="VR1" gate="G$1" x="60.96" y="50.8" rot="R270"/>
 <instance part="VR2" gate="G$1" x="139.7" y="58.42" rot="R270"/>
-<instance part="U$2" gate="G$1" x="78.74" y="93.98"/>
-<instance part="U$3" gate="G$1" x="78.74" y="86.36"/>
 <instance part="PWR_LED" gate="G$1" x="134.62" y="96.52"/>
 <instance part="GND3" gate="1" x="101.6" y="86.36"/>
 <instance part="SUPPLY1" gate="G$1" x="124.46" y="129.54"/>
@@ -1784,6 +1775,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="GND4" gate="1" x="134.62" y="86.36"/>
 <instance part="R2" gate="G$1" x="66.04" y="63.5" rot="R270"/>
 <instance part="R5" gate="G$1" x="147.32" y="63.5" rot="R270"/>
+<instance part="U$5" gate="G$1" x="78.74" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -1851,8 +1843,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="SUPPLY5" gate="G$1" pin="VCC"/>
 <wire x1="60.96" y1="93.98" x2="60.96" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="60.96" y1="93.98" x2="73.66" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="POS"/>
@@ -1939,9 +1931,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="132.08" y="50.8" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="58.42" y="86.36" size="1.778" layer="95"/>
-<pinref part="U$3" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="86.36" x2="78.74" y2="86.36" width="0.1524" layer="91"/>
+<label x="60.96" y="88.9" size="1.778" layer="95"/>
+<wire x1="60.96" y1="88.9" x2="73.66" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="N$15" class="0">
