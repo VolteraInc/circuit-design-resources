@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.6.0">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="94.6" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -156,8 +157,6 @@
 <wire x1="76.2" y1="2.54" x2="73.66" y2="0" width="0.127" layer="20" curve="-90"/>
 <wire x1="73.66" y1="0" x2="2.54" y2="0" width="0.127" layer="20"/>
 <wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="20" curve="-90"/>
-<pad name="P$1" x="3.5" y="3.51" drill="0.3" diameter="1"/>
-<pad name="P$2" x="72.7" y="47.3" drill="0.3" diameter="1" rot="R180"/>
 <polygon width="0.0762" layer="21">
 <vertex x="70.936" y="2.902"/>
 <vertex x="70.936" y="3.664" curve="-90"/>
@@ -214,10 +213,16 @@
 <vertex x="3.499" y="47.987"/>
 <vertex x="2.991" y="47.987" curve="-90"/>
 </polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$1" x="72.7" y="47.3" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$2" x="72.7" y="47.3" dx="1" dy="1" layer="16" roundness="100" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="30"/>
+<smd name="P$4" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="30"/>
 </package>
 <package name="3X4_BOARD">
-<pad name="P$1" x="3.5" y="3.5" drill="0.3" diameter="1"/>
-<pad name="P$2" x="98.1" y="72.7" drill="0.3" diameter="1" rot="R180"/>
 <wire x1="0" y1="2.54" x2="2.54" y2="0" width="0.127" layer="20" curve="90"/>
 <wire x1="2.54" y1="0" x2="99.06" y2="0" width="0.127" layer="20"/>
 <wire x1="99.06" y1="0" x2="101.6" y2="2.54" width="0.127" layer="20" curve="90"/>
@@ -282,6 +287,14 @@
 <vertex x="3.169" y="73.457"/>
 <vertex x="2.661" y="73.457" curve="-90"/>
 </polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$4" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="30"/>
+<smd name="P$1" x="98.1" y="72.7" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="98.1" y="72.7" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$5" x="98.1" y="72.7" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="98.1" y="72.7" radius="0.375" width="0.75" layer="30"/>
 </package>
 <package name="ARDUINO_UNO">
 <wire x1="35.56" y1="-29.464" x2="34.544" y2="-30.48" width="0.127" layer="20" curve="-90"/>
@@ -11402,8 +11415,6 @@
 <wire x1="135" y1="2.54" x2="132.46" y2="0" width="0.127" layer="20" curve="-90"/>
 <wire x1="132.46" y1="0" x2="2.54" y2="0" width="0.127" layer="20"/>
 <wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="20" curve="-90"/>
-<pad name="P$1" x="3.5" y="3.51" drill="0.3" diameter="1"/>
-<pad name="P$2" x="131.5" y="98.1" drill="0.3" diameter="1" rot="R180"/>
 <polygon width="0.0762" layer="21">
 <vertex x="129.736" y="2.902"/>
 <vertex x="129.736" y="3.664" curve="-90"/>
@@ -11460,6 +11471,14 @@
 <vertex x="3.499" y="98.787"/>
 <vertex x="2.991" y="98.787" curve="-90"/>
 </polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$4" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="30"/>
+<smd name="P$1" x="131.5" y="98.1" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="131.5" y="98.1" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$5" x="131.5" y="98.1" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="131.5" y="98.1" radius="0.375" width="0.75" layer="30"/>
 </package>
 <package name="2X3_BOARD_FR1">
 <wire x1="0" y1="2.54" x2="0" y2="48.26" width="0.127" layer="20"/>
@@ -11526,12 +11545,16 @@
 <vertex x="3.499" y="47.987"/>
 <vertex x="2.991" y="47.987" curve="-90"/>
 </polygon>
-<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100"/>
-<smd name="P$4" x="72.7" y="47.3" dx="1" dy="1" layer="1" roundness="100"/>
-<smd name="P$5" x="72.7" y="47.3" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
-<smd name="P$6" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180"/>
 <text x="2" y="48.8" size="1.016" layer="21" align="top-left">FR1</text>
 <text x="74.2" y="2" size="1.016" layer="22" rot="SR180" align="top-left">FR1</text>
+<smd name="P$1" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$2" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="30"/>
+<smd name="P$3" x="72.7" y="47.3" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$6" x="72.7" y="47.3" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="30"/>
 </package>
 <package name="3X4_BOARD_FR1">
 <wire x1="0" y1="2.54" x2="2.54" y2="0" width="0.127" layer="20" curve="90"/>
@@ -12205,38 +12228,6 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="2X3_BOARD">
-<gates>
-<gate name="G$1" symbol="VIAS" x="38.1" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="2X3_BOARD">
-<connects>
-<connect gate="G$1" pin="VIA1" pad="P$1"/>
-<connect gate="G$1" pin="VIA2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="3X4_BOARD">
-<gates>
-<gate name="G$1" symbol="VIAS" x="38.1" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="3X4_BOARD">
-<connects>
-<connect gate="G$1" pin="VIA1" pad="P$1"/>
-<connect gate="G$1" pin="VIA2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="TEMPLATE_RBP">
 <gates>
 <gate name="G$1" symbol="PI_HAT" x="0" y="0"/>
@@ -13191,22 +13182,6 @@ More EAGLE documentation at: http://www.element14.com/community/community/knode/
 <connect gate="G$1" pin="P9" pad="P9 P9@1 P9@2" route="any"/>
 <connect gate="G$1" pin="SIG+" pad="+ +@1 +@2 +@3 +@4 +@5 +@6 +@7 +@8 +@9" route="any"/>
 <connect gate="G$1" pin="SIG-" pad="- -@1 -@2 -@3 -@4 -@5 -@6 -@7 -@8 -@9" route="any"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="4X5_BOARD" prefix="B">
-<gates>
-<gate name="G$1" symbol="VIAS" x="38.1" y="-5.08"/>
-</gates>
-<devices>
-<device name="" package="4X5_BOARD">
-<connects>
-<connect gate="G$1" pin="VIA1" pad="P$1"/>
-<connect gate="G$1" pin="VIA2" pad="P$2"/>
 </connects>
 <technologies>
 <technology name=""/>
