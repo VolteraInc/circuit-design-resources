@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.025" altunitdist="inch" altunit="inch"/>
@@ -149,7 +150,7 @@
 <plain>
 </plain>
 <libraries>
-<library name="voltera_community_lib">
+<library name="voltera_EAGLE_community_lib">
 <packages>
 <package name="2X3_BOARD">
 <wire x1="0" y1="2.54" x2="0" y2="48.26" width="0.127" layer="20"/>
@@ -160,8 +161,6 @@
 <wire x1="76.2" y1="2.54" x2="73.66" y2="0" width="0.127" layer="20" curve="-90"/>
 <wire x1="73.66" y1="0" x2="2.54" y2="0" width="0.127" layer="20"/>
 <wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="20" curve="-90"/>
-<pad name="P$1" x="3.5" y="3.51" drill="0.3" diameter="1"/>
-<pad name="P$2" x="72.7" y="47.3" drill="0.3" diameter="1" rot="R180"/>
 <polygon width="0.0762" layer="21">
 <vertex x="70.936" y="2.902"/>
 <vertex x="70.936" y="3.664" curve="-90"/>
@@ -218,6 +217,14 @@
 <vertex x="3.499" y="47.987"/>
 <vertex x="2.991" y="47.987" curve="-90"/>
 </polygon>
+<smd name="P$3" x="3.5" y="3.5" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$1" x="72.7" y="47.3" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="29"/>
+<smd name="P$2" x="72.7" y="47.3" dx="1" dy="1" layer="16" roundness="100" stop="no" cream="no"/>
+<circle x="72.7" y="47.3" radius="0.375" width="0.75" layer="30"/>
+<smd name="P$4" x="3.5" y="3.5" dx="1" dy="1" layer="16" roundness="100" rot="R180" stop="no" cream="no"/>
+<circle x="3.5" y="3.5" radius="0.375" width="0.75" layer="30"/>
 </package>
 </packages>
 </library>
@@ -306,10 +313,11 @@ design rules under a new name.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -410,7 +418,7 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="E$1" library="voltera_community_lib" package="2X3_BOARD" value="" x="0" y="0"/>
+<element name="E$2" library="voltera_EAGLE_community_lib" package="2X3_BOARD" value="" x="0" y="0"/>
 </elements>
 <signals>
 </signals>
